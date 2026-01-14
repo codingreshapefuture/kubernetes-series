@@ -4,15 +4,13 @@ Trên tất cả các node sẽ cài các thành phần: docker, kubelet, kubead
 + kubelet: Là thành phần chạy trên các host, có nhiệm vụ kích hoạt các pod và container trong cụm Cluser của K8S.
 + kubectl: Là công cụ cung cấp CLI để tương tác với K8S.
 
-Install K8s: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
-Container runtime: https://kubernetes.io/docs/setup/production-environment/container-runtimes/
-HA Cluster: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/
-
 Open ports phụ thuộc:
+```
 TCP/2379: etcd endpoint
 TCP/2380: etcd member
 TCP/10250: kubelet API
 TCP/6443: apiserver
+```
 
 ----------
 
@@ -165,3 +163,4 @@ kubectl config view
 kubectl cluster-info
 kubectl get pod -A
 ```
+
