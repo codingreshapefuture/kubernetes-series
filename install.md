@@ -56,7 +56,6 @@ containerd config default | sudo tee /etc/containerd/config.toml >/dev/null 2>&1
 sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
 sudo systemctl restart containerd
 sudo systemctl enable containerd
-systemctl status containerd
 ```
 
 Cài đặt các gói Kubernetes (all nodes):
@@ -68,7 +67,6 @@ sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable --now kubelet
-kubectl version --client && kubeadm version
 ```
 
 ===Tạo K8s cluster (1 master node) (k8s-master):
@@ -163,4 +161,3 @@ kubectl config view
 kubectl cluster-info
 kubectl get pod -A
 ```
-
