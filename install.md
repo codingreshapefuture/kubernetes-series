@@ -1,7 +1,7 @@
 Trên tất cả các node sẽ cài các thành phần: docker, kubelet, kubeadm và kubectl
 + Docker/Containerd: để làm môi trường chạy các container runtime.
 + kubeadm: Được sử dụng để thiết lập cụm cluster cho K8S. Các tài liệu chuyên môn gọi kubeadm là bột bootstrap (tools đóng gói để tự động làm việc gì đó)
-+ kubelet: Là thành phần chạy trên các host, có nhiệm vụ kích hoạt các pod và container trong cụm Cluser của K8S.
++ kubelet: Là thành phần chạy trên các host, có nhiệm vụ kích hoạt các pod và container trong cụm Cluster của K8S.
 + kubectl: Là công cụ cung cấp CLI để tương tác với K8S.
 
 Open ports phụ thuộc:
@@ -161,3 +161,4 @@ kubectl config view
 kubectl cluster-info
 kubectl get pod -A
 ```
+
