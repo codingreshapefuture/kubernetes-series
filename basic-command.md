@@ -39,7 +39,7 @@ kubectl exec -it <POD_NAME> -- /bin/bash: ta sẽ inject cotainer của pod đ�
 
 kubectl logs <POD_NAME>: xem logs của pod
 
-kubectl port-forward <POD_NAME> <port out:port in>: forward traffic nội bộ ra bên ngoài
+kubectl port-forward <resource> --address 0.0.0.0 <port out:port in>: forward traffic nội bộ ra bên ngoài
 kubectl expose deployments <NAME> --type=<service-type> --port=80 --target-port=8080: tạo service LoadBalancer điều hướng port 80 traffic đến deployment port 8080
 
 kubectl top pod: xem thông số tiêu thụ cpu/ram của pod
