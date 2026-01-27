@@ -19,7 +19,10 @@ Khi bạn tạo một Service kiểu ClusterIP hoặc NodePort, kube-proxy sẽ 
 Tạo service ClusterIP:
 ```
 kubectl expose deployment nginx-app --name=nginx-service --port=8080 --target-port=80
+```
 
+Kiểm tra IP Pod:
+```
 kubectl get endpoints nginx-service
 ```
 
