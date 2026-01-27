@@ -32,3 +32,5 @@ kubectl run test-pod --image=busybox --rm -it --restart=Never -- wget -qO- http:
 ```
 
 -> Có thể gọi service qua IP Internal, ClusterIP, NodePort
+
+If you set the type field to NodePort, the Kubernetes control plane allocates a port from a range specified by --service-node-port-range flag (default: 30000-32767). Each node proxies that port (the same port number on every Node) into your Service.
