@@ -30,3 +30,5 @@ Test kết nối:
 ```
 kubectl run test-pod --image=busybox --rm -it --restart=Never -- wget -qO- http://nginx-service:8080
 ```
+
+-> Có thể gọi service qua IP Internal, ClusterIP, NodePort
