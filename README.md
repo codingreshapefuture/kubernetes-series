@@ -8,7 +8,7 @@ Link: https://youtube.com/playlist?list=PLRz-2ltlXLUJTE2tNvIWAzRAG-aqLpzZx&si=Zc
 2. basic-command.md (Khái niệm và các lệnh kubectl cơ bản)
 3. learn-yaml.md (Quản lý workload và tạo tài nguyên từ file YAML)
 4. publish-service-app.md (Triển khai ứng dụng và kết nối dịch vụ cơ bản)
-5. service-types.md (Các loại dịch vụ kết nối ứng dụng nội bộ)
+5. networking-and-services.md (Phân dải DNS và giao tiếp dịch vụ nội bộ)
 6. secret-configmap-env.md (Thiết lập cấu hình và quản lý biến môi trường)
 7. storage-types.md (Quản lý các loại lưu trữ và Persistent Volume)
 8. manage-context.md (Quản lý Context và môi trường làm việc hiệu quả)
