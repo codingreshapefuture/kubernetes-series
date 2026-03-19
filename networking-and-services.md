@@ -46,31 +46,31 @@ Address:   10.96.0.1
 
 ---
 
-# Mặc định, khi 1 pod tạo ra sẽ có IP động và có thể giao tiếp tới các pod khác qua IP đó
+Mặc định, khi 1 pod tạo ra sẽ có IP động và có thể giao tiếp tới các pod khác qua IP đó
 -> nhưng thực tế không bao giờ kết nối trực tiếp qua Pod IP mà dùng Service Name (DNS)
 
-# Gọi service qua pod DNS
+Gọi service qua pod DNS
 + cùng namespace: curl <service-name>:<port>
 + khác namespace: curl <service-name>.<namespace>.svc.cluster.local:<port>
 
-# Tạo service cho pod
+Tạo service cho pod
 + gán service cho pod sử dụng selector (nếu nhiều sẽ được loadbalancer)
 + protocol có thể sử dụng TCP/UDP/ICMP
 + có nhiều loại service sử dụng type
 
-# ClusterIP sẽ expose IP nội bộ trong pod ra IP cluster
+ClusterIP sẽ expose IP nội bộ trong pod ra IP cluster
 + các pod khác có thể giao tiếp qua <service-name>:<cluster-port>
 + service được truy cập trong cluster
 + có thể tạo nhiều port/target port cho service
 
-# NodePort sẽ expose IP nội bộ trong pod ra IP node
+NodePort sẽ expose IP nội bộ trong pod ra IP node
 + các pod khác có thể giao tiếp qua <service-name>:<cluster-port>
 + các pod khác có thể giao tiếp qua <IP node>:<node port>
 + service có thể truy cập ngoài internet
 + có thể tạo nhiều port/target port cho service
 + port expose ra ngoài theo range 30000-32767
 
-# LoadBalancer sẽ expose IP nội bộ trong pod ra IP LB
+LoadBalancer sẽ expose IP nội bộ trong pod ra IP LB
 + các pod khác có thể giao tiếp qua <service-name>:<cluster-port>
 + các pod khác có thể giao tiếp qua <IP node>:<node port>
 + các pod khác có thể giao tiếp qua <IP LB>:<cluster-port>
@@ -78,11 +78,11 @@ Address:   10.96.0.1
 + có thể tạo nhiều port/target port cho service
 + cần sử dụng cloud LB hoặc metalLB mới dùng được
 
-# ExternalName sẽ expose service qua domain CNMAE
+ExternalName sẽ expose service qua domain CNMAE
 + map đến DNS bên ngoài, không mở port
 + ít dùng, chưa thử
 
-# Ingress sẽ routing service qua url path
+Ingress sẽ routing service qua url path
 + không expose port, map đến DNS nội bộ
 + expose service qua routing rules
 Lưu ý: Ingress không phải Service, mà là tập hợp rule được Ingress Controller thực thi
