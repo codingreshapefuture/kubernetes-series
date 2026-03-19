@@ -1,6 +1,6 @@
 Khi bạn tạo một Service, Kubernetes sẽ tự động đăng ký DNS record cho Service đó trong CoreDNS
 
-Mọi Pod trong cluster có thể truy cập Service này bằng tên DNS thay vì IP qua <service-name>.<namespace>.svc.cluster.local
+Mọi Pod trong cluster có thể truy cập Service này bằng tên DNS thay vì IP qua `<service-name>.<namespace>.svc.cluster.local`
 
 ```
 kubectl describe pod helloworld
@@ -36,7 +36,11 @@ spec:
 ```
 
 Kiểm tra DNS Resolution:
+```
 kubectl run test-dns --image=busybox --rm -it --restart=Never -- nslookup kubernetes.default
+```
+
+Kết quả:
 ```
 Server:    10.96.0.10
 Address:   10.96.0.10#53
@@ -50,8 +54,8 @@ Mặc định, khi 1 pod tạo ra sẽ có IP động và có thể giao tiếp 
 -> nhưng thực tế không bao giờ kết nối trực tiếp qua Pod IP mà dùng Service Name (DNS)
 
 Gọi service qua pod DNS
-+ cùng namespace: curl <service-name>:<port>
-+ khác namespace: curl <service-name>.<namespace>.svc.cluster.local:<port>
++ cùng namespace: `curl <service-name>:<port>`
++ khác namespace: `curl <service-name>.<namespace>.svc.cluster.local:<port>`
 
 Tạo service cho pod
 + gán service cho pod sử dụng selector (nếu nhiều sẽ được loadbalancer)
@@ -59,21 +63,21 @@ Tạo service cho pod
 + có nhiều loại service sử dụng type
 
 ClusterIP sẽ expose IP nội bộ trong pod ra IP cluster
-+ các pod khác có thể giao tiếp qua <service-name>:<cluster-port>
++ các pod khác có thể giao tiếp qua `<service-name>:<cluster-port>`
 + service được truy cập trong cluster
 + có thể tạo nhiều port/target port cho service
 
 NodePort sẽ expose IP nội bộ trong pod ra IP node
-+ các pod khác có thể giao tiếp qua <service-name>:<cluster-port>
-+ các pod khác có thể giao tiếp qua <IP node>:<node port>
++ các pod khác có thể giao tiếp qua `<service-name>:<cluster-port>`
++ các pod khác có thể giao tiếp qua `<IP node>:<node port>`
 + service có thể truy cập ngoài internet
 + có thể tạo nhiều port/target port cho service
 + port expose ra ngoài theo range 30000-32767
 
 LoadBalancer sẽ expose IP nội bộ trong pod ra IP LB
-+ các pod khác có thể giao tiếp qua <service-name>:<cluster-port>
-+ các pod khác có thể giao tiếp qua <IP node>:<node port>
-+ các pod khác có thể giao tiếp qua <IP LB>:<cluster-port>
++ các pod khác có thể giao tiếp qua `<service-name>:<cluster-port>`
++ các pod khác có thể giao tiếp qua `<IP node>:<node port>`
++ các pod khác có thể giao tiếp qua `<IP LB>:<cluster-port>`
 + service có thể truy cập ngoài internet
 + có thể tạo nhiều port/target port cho service
 + cần sử dụng cloud LB hoặc metalLB mới dùng được
