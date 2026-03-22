@@ -82,7 +82,7 @@ LoadBalancer sẽ expose IP nội bộ trong pod ra IP LB
 + có thể tạo nhiều port/target port cho service
 + cần sử dụng cloud LB hoặc metalLB mới dùng được
 
-ExternalName sẽ expose service qua domain CNMAE
+ExternalName sẽ expose service qua domain CNAME
 + map đến DNS bên ngoài, không mở port
 + ít dùng, chưa thử
 
