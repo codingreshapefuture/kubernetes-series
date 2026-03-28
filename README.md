@@ -11,9 +11,8 @@ Link: https://youtube.com/playlist?list=PLRz-2ltlXLUJTE2tNvIWAzRAG-aqLpzZx&si=Zc
 5. networking-and-services.md (Phân dải DNS và giao tiếp dịch vụ nội bộ)
 6. storage-types.md (Quản lý các loại lưu trữ và Persistent Volume)
 7. secret-configmap-env.md (Thiết lập cấu hình và quản lý biến môi trường)
-8. manage-context.md (Quản lý Context và môi trường làm việc hiệu quả)
-10. advanced-scheduler.md (Kỹ thuật lập lịch và điều phối Pod nâng cao)
-11. rancher.md (Quản trị và vận hành Cluster tập trung với Rancher)
-12. ingress.md
-13. helm.md
-14. argocd.md (Triển khai ứng dụng tự động theo chuẩn GitOps)
+8. ingress.md
+9.  advanced-scheduler.md (Kỹ thuật lập lịch và điều phối Pod nâng cao)
+10. rancher.md (Quản trị và vận hành Cluster tập trung với Rancher)
+11. helm.md
+12. argocd.md (Triển khai ứng dụng tự động theo chuẩn GitOps)
