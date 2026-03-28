@@ -36,7 +36,7 @@ PV/PVC tách biệt rõ giữa người cung cấp (admin) và người dùng (d
 Tham khảo: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 
 Các loại PV:
-+ csi/fc/hostpath/iscsi/loca/nfs
++ csi/fc/hostpath/iscsi/local/nfs
 + cloud storage (aws, azure, cinder, flex, gce, portworx, vsphere)
 + other (cephfs/flocker/glusterfs/photon/quobyte/rbd)
 
