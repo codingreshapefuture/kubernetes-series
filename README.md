@@ -14,5 +14,6 @@ Link: https://youtube.com/playlist?list=PLRz-2ltlXLUJTE2tNvIWAzRAG-aqLpzZx&si=Zc
 8. ingress.md
 9.  advanced-scheduler.md (Kỹ thuật lập lịch và điều phối Pod nâng cao)
 10. rancher.md (Quản trị và vận hành Cluster tập trung với Rancher)
-11. helm.md
-12. argocd.md (Triển khai ứng dụng tự động theo chuẩn GitOps)
+11. cloud-k8s-engine.md
+12. helm.md
+13. argocd.md (Triển khai ứng dụng tự động theo chuẩn GitOps)
