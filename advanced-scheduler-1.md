@@ -14,12 +14,16 @@
 Có 2 cách phổ biến nhất để schedule pod hoặc deployment dựa trên label của worker Node mong muốn là node selector và node affinity
 
 Xem labels của các nodes:
+```
 kubectl get nodes --show-labels
+```
 
 Đánh label cho nodes:
+```
 kubectl label node <node-name> <key>=<value>
 kubectl label node <node-name> disktype=ssd
 kubectl label node <node-name> cpu=high
+```
 
 === Node Selector
 
@@ -46,6 +50,7 @@ Node affinity cho phép chọn theo Expression linh hoạt hơn, nhưng cú phá
 + nodeSelectorTerms: mảng chứa nhiều matchExpressions
 + operator: In, NotIn, Exists, DoesNotExist, Gt, Lt
 + requiredDuringSchedulingIgnoredDuringExecution: pod chỉ được schedule khi node đã có label đó, không ảnh hưởng các pod đã ở node trước đó
+
 ```
 apiVersion: v1
 kind: Pod
@@ -70,6 +75,7 @@ spec:
 Ngoài ra còn có lựa chọn theo độ ưu tiên để đặt các rule tùy chỉnh hơn:
 + preferredDuringSchedulingIgnoredDuringExecution: pod sẽ ưu tiên schedule với các node này hơn, được đặt theo trọng số
 + weight: trọng số ưu tiên, càng cao càng ưu tiên trước
+
 ```
 spec:
   affinity:
@@ -99,7 +105,9 @@ spec:
 ```
 
 Xem các pod đang chạy trên node nào
+```
 kubectl get pods -owide
+```
 
 ---
 
