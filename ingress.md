@@ -11,7 +11,9 @@ Ngoài ra, Ingress sử dụng annotation để chỉ định những cấu hìn
 
 Tham khảo: https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
 
----Demo HTTP/80/nginx---
+---
+
+### Demo HTTP/80/nginx
 
 Tham khảo: https://kubernetes.github.io/nginx-ingress/deploy/
 
@@ -71,7 +73,9 @@ Kết quả sẽ là
 <html><body><h1>It works!</h1></body></html>
 ```
 
----Demo HTTPS/8080/haproxy---
+---
+
+### Demo HTTPS/8080/haproxy
 
 Tham khảo: https://www.haproxy.com/documentation/kubernetes-ingress/community/installation/on-prem/
 
