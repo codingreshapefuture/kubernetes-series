@@ -3,9 +3,9 @@
 + node-affinity
 + pod-autoscale
 + request-limit
++ tain-tolerations
 + rolling-update
 + rollout-rollback
-+ tain-tolerations
 
 ---
 
