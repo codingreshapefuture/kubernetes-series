@@ -12,6 +12,12 @@ Các nền tảng phổ biến:
 + Azure Kubernetes Service (AKS): miễn phí quản lý control plane, tối ưu cho hệ sinh thái AD Microsoft
 + DigitalOcean Kubernetes (DOKS): chi phí rẻ hơn, ổn định
 
+Cloud nội địa:
++ Độ trễ (Latency): Kết nối nội địa thường đạt dưới 10ms, không lo đứt cáp quang biển ảnh hưởng đến việc quản trị.
++ Chi phí: Thanh toán bằng VNĐ, hóa đơn tài chính (VAT) đầy đủ, giá thành thường "mềm" hơn so với các ông lớn quốc tế khi tính theo cấu hình tương đương.
++ Hỗ trợ nội địa: Support bằng tiếng Việt, có thể làm việc trực tiếp với đội ngũ kỹ thuật của nhà cung cấp để xử lý các vấn đề hạ tầng đặc thù.
++ Tuân thủ pháp lý: Đáp ứng hoàn toàn yêu cầu lưu trữ dữ liệu người dùng Việt Nam tại Việt Nam theo nghị định 53/2022/NĐ-CP.
+
 Các nhà cung cấp VN:
 + Viettel Kubernetes Engine (vKE): tích hợp GPU, băng thông trong nước tốt, bảo mật cao
 + VNG Cloud Kubernetes Service (VKS): hiện đại, đội ngũ kinh nghiệm, xử lý traffic tốt
