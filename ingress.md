@@ -123,7 +123,7 @@ helm install ingress-haproxy ingress-haproxy/kubernetes-ingress --create-namespa
 
 Cài đặt với YAML manifests:
 ```
-kubectl apply -f https://raw.githubusercontent.com/haproxytech/kubernetes-ingress/master/deploy/ingress-haproxy.yaml
+kubectl apply -f https://raw.githubusercontent.com/haproxytech/kubernetes-ingress/master/deploy/haproxy-ingress.yaml
 ```
 
 Mặc định service ingress-haproxy sử dụng NodePort, đổi về LoadBalancer để lấy IP Public
