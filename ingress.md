@@ -11,6 +11,34 @@ Ngoài ra, Ingress sử dụng annotation để chỉ định những cấu hìn
 
 Tham khảo: https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
 
+Ví dụ:
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webapp-ingress
+spec:
+  ingressClassName: haproxy
+  rules:
+  - host: dev.local
+    http:
+      paths:
+      - path: /web
+        pathType: Prefix
+        backend:
+          service:
+            name: frontend-svc
+            port:
+              number: 80
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-svc
+            port:
+              number: 8080
+```
+
 ---
 
 ### Demo HTTP/80/nginx
