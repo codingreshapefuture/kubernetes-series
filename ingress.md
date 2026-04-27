@@ -63,7 +63,7 @@ helm install ingress-nginx ingress-nginx --create-namespace --namespace ingress-
 Cài đặt với YAML manifests:
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/baremetal/deploy.yaml
-# kubectl apply -f https://raw.githubusercontent.com/kubernetes/nginx-ingress/main/deploy/static/provider/cloud/deploy.yaml
+# kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
 ```
 
 Service nginx-controller-admission sử dụng NodePort, hoặc LoadBalancer để lấy IP Public (mặc định)
