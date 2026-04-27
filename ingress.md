@@ -5,6 +5,7 @@ Lưu ý: Ingress không phải Service, mà là tập hợp rule được Ingres
 Ingress controller chịu trách nhiệm thực hiện Ingress, như load balance, name-based virtual host,...
 + Với baremetal thì Ingress controller sử dụng NodePort + loadbalancer server để expose
 + Với cloud thì Ingress controller có thể sử dụng Loadbalancer trực tiếp luôn
+
 -> Trên on-prem không có LB IP thì cần cài metallb
 
 Ngoài ra, Ingress sử dụng annotation để chỉ định những cấu hình đặc biệt như whitelist, blacklist,...
