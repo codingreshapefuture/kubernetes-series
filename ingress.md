@@ -15,7 +15,7 @@ Tham khảo: https://kubernetes.io/docs/concepts/services-networking/ingress-con
 
 ### Demo HTTP/80/nginx
 
-Tham khảo: https://kubernetes.github.io/nginx-ingress/deploy/
+Tham khảo: https://kubernetes.github.io/ingress-nginx/deploy/
 
 Có thể cài Nginx Ingress Controller bằng nhiều cách:
 + Helm chart
